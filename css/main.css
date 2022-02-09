@@ -20,6 +20,11 @@ body {
   font-weight: 500;
 }
 
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+}
+
 .container {
   width: 1280px;
   margin: 0 auto;
@@ -134,10 +139,8 @@ body {
   padding: 48px 0px 37px 50px;
 }
 
-.product_01 .box h2 {
+.product_01 .box h3 {
   font-size: 40px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 800;
   color: #fff;
 }
 
@@ -146,4 +149,168 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   color: #fff;
+}
+
+/* product_02 */
+.product_02 {
+  margin-bottom: 125px;
+}
+
+.product_02 h3 {
+  font-size: 30px;
+  margin-bottom: 66px;
+}
+
+.product_02 .box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 56px;
+}
+
+.product_02 .box .card:hover {
+  text-decoration: underline;
+}
+
+.product_02 .box .card .photo {
+  width: 306px;
+  height: 306px;
+  background-color: #c4c4c4;
+}
+
+.product_02 .box .card .info {
+  padding-top: 16px;
+}
+
+.product_02 .box .card .info .h4 {
+  font-size: 18px;
+}
+
+.product_02 .box .card .info .price {
+  font-size: 18px;
+}
+
+.product_02 .indicator {
+  background-color: #c4c4c4;
+  height: 7px;
+}
+
+.product_02 .indicator .bar {
+  background-color: #111111;
+  height: 7px;
+  width: 308px;
+}
+
+/* Join  */
+
+.join {
+  margin-top: 25px;
+  margin-bottom: 110px;
+}
+
+.join .join_info {
+  display: flex;
+  flex-direction: column;
+  width: 257px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.join .join_info h3 {
+  font-size: 40px;
+  font-weight: 800;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: -3px;
+  /* letter spacing 한 글자 사이의 거리 */
+  line-height: 1;
+}
+
+.join .join_info p {
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  margin: 14px 0 26px 0;
+}
+
+.join .join_info .btn {
+  color: #111111;
+  background-color: transparent;
+  border: 1px solid #111111;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+/* footer */
+.footer {
+  background-color: #111111;
+  padding-top: 66px;
+  padding-bottom: 10px;
+  color: #fff;
+}
+
+.footer .footer_menu {
+  display: flex;
+}
+
+.footer .footer_menu .social {
+  margin-left: auto;
+}
+
+.footer .footer_menu .bottom_menu {
+  display: flex;
+}
+
+.footer .footer_menu .bottom_menu > li {
+  width: 214px;
+}
+
+.footer .footer_menu .bottom_menu > li > a {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 12px;
+  padding: 10px 0;
+}
+
+.bottom_menu ul a {
+  font-size: 14px;
+  display: block;
+  padding: 6px 0;
+}
+
+.footer_menu .social h4 {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 10px 0;
+}
+
+.footer_menu .social .icons {
+  display: flex;
+  font-size: 18px;
+  gap: 16px;
+  color: #111111;
+  padding: 8px;
+  /* 위에 h4에 들어가는 패딩값을 줄여주고 줄인 만큼 여기다가 넣어야 왼쪽 메뉴와 동일선상에 둘 수 있음 */
+}
+
+.footer_menu .social .icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.footer_menu .social .icons i {
+}
+
+.copyright {
+  margin-top: 120px;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.5);
 }
