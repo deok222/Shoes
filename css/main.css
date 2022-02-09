@@ -26,18 +26,15 @@ h3 {
 }
 
 .container {
-  width: 1280px;
+  width: 1340px;
   margin: 0 auto;
-  padding: 40px 0;
+  padding: 40px 30px;
 }
 
 /* top */
-.top {
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
+
+.bars {
+  display: none;
 }
 
 .nav {
@@ -54,6 +51,15 @@ h3 {
   text-decoration: underline;
 }
 
+.top {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 40px;
+}
+
 .logo {
   position: absolute;
   top: 50%;
@@ -66,7 +72,6 @@ h3 {
   background-color: #111111;
   color: #fff;
   padding: 12px 11px;
-  margin-bottom: 40px;
 }
 
 .top_menu {
@@ -81,7 +86,6 @@ h3 {
   margin-bottom: 98px;
   background: url(../images/shoes.png) no-repeat;
   background-position: right -50px;
-  margin-top: 27px;
   position: relative;
 }
 
@@ -103,22 +107,31 @@ h3 {
   line-height: 1;
 }
 
+.slide .info h2.mo_title {
+  display: none;
+}
+
 .slide .info p {
   font-size: 18px;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
-  width: 257px;
   margin: 15px 0 18px 0;
 }
 
 .slide .info .btn {
+  width: 256px;
+  height: 64px;
   color: #fff;
   background-color: #111111;
-  border: 1px solid #111111;
+  border: none;
   padding: 20px 104px;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 /* prodct_01 */
@@ -136,11 +149,14 @@ h3 {
   width: 632px;
   height: 642px;
   background-color: #111111;
-  padding: 48px 0px 37px 50px;
+  padding: 50px 48px 37px;
+  color: #fff;
 }
 
 .product_01 .box h3 {
   font-size: 40px;
+  font-weight: 800;
+  font-family: "Montserrat", sans-serif;
   color: #fff;
 }
 
@@ -158,6 +174,8 @@ h3 {
 
 .product_02 h3 {
   font-size: 30px;
+  font-weight: 800;
+  font-family: "Montserrat", sans-serif;
   margin-bottom: 66px;
 }
 
@@ -165,7 +183,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 56px;
+  margin-bottom: 45px;
 }
 
 .product_02 .box .card:hover {
@@ -198,7 +216,7 @@ h3 {
 .product_02 .indicator .bar {
   background-color: #111111;
   height: 7px;
-  width: 308px;
+  width: 306px;
 }
 
 /* Join  */
@@ -229,14 +247,19 @@ h3 {
   font-size: 18px;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
-  margin: 14px 0 26px 0;
+  margin: 14px 0 26px;
 }
 
 .join .join_info .btn {
+  width: 256px;
+  height: 64px;
   color: #111111;
   background-color: transparent;
   border: 1px solid #111111;
-  padding: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 18px;
@@ -313,4 +336,89 @@ h3 {
   margin-top: 120px;
   font-size: 10px;
   color: rgba(255, 255, 255, 0.5);
+}
+
+/* 반응형 */
+/* max -> 설정한 크기 이하부터 */
+/* min -> 설정한 크기 이상부터 */
+@media (max-width: 576px) {
+  .container {
+    width: 100%;
+    padding: initial;
+  }
+
+  .top {
+    padding: 0px 20px;
+    padding-top: 40px;
+    margin-bottom: 0;
+  }
+
+  .nav {
+    display: flex;
+    gap: 18px;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.86);
+    width: 100%;
+    height: 100vh;
+    gap: 28px;
+    z-index: 1;
+    padding-top: 120px;
+  }
+
+  .nav a {
+    color: #fff;
+    padding: 14px 0;
+    display: block;
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .bars {
+    display: block;
+    font-size: 28px;
+    z-index: 2;
+    color: #fff;
+  }
+
+  .logo {
+    font-size: 18px;
+    top: 80%;
+  }
+
+  .top_menu {
+    gap: 10px;
+  }
+
+  .slide {
+    height: 600px;
+    margin-bottom: 68px;
+    background: url(../images/Shoes_m.png) no-repeat;
+    /* 백그라운드를 플립시키는 기능은 없음. 따라서 뒤집힌 새로운 이미지를 가져와야 된다 */
+    background-position: center top;
+    background-size: 120%;
+  }
+
+  .slide .info {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+
+  .slide .info h2.mo_title {
+    display: block;
+  }
+  .slide .info h2.pc_title {
+    display: none;
+  }
+
+  .product_01,
+  .product_02,
+  .join,
+  .footer {
+    display: none;
+  }
 }
