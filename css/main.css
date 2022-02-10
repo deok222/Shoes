@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;1,800&family=Poppins:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Poppins:wght@500&display=swap");
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif; */
 
 * {
   margin: 0;
@@ -20,23 +22,13 @@ body {
   font-weight: 500;
 }
 
-h3 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 800;
-}
-
 .container {
   width: 1340px;
   margin: 0 auto;
   padding: 40px 30px;
 }
 
-/* top */
-
-.bars {
-  display: none;
-}
-
+/* nav */
 .nav {
   display: flex;
   gap: 28px;
@@ -44,20 +36,19 @@ h3 {
 
 .nav a {
   padding: 14px 0;
-  /* background-color: red; */
-}
-
-.nav a:hover {
-  text-decoration: underline;
 }
 
 .top {
-  height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 60px;
   position: relative;
   margin-bottom: 40px;
+}
+
+.bars {
+  display: none;
 }
 
 .logo {
@@ -65,11 +56,10 @@ h3 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 28px;
   font-family: "Montserrat", sans-serif;
-  font-weight: 800;
+  font-size: 28px;
   font-style: italic;
-  background-color: #111111;
+  background-color: #111;
   color: #fff;
   padding: 12px 11px;
 }
@@ -84,57 +74,50 @@ h3 {
 .slide {
   height: 640px;
   margin-bottom: 98px;
-  background: url(../images/shoes.png) no-repeat;
+  background: url("../images/shoes.png") no-repeat;
   background-position: right -50px;
   position: relative;
 }
 
-.slide .info {
-  display: flex;
-  flex-direction: column;
+.slide__text {
   position: absolute;
   bottom: 0;
   left: 0;
+  display: flex;
+  flex-direction: column;
 }
 
-.slide .info h2 {
+.slide__text h2 {
+  font-family: "Montserrat", sans-serif;
   font-size: 60px;
   font-weight: 800;
-  font-family: "Montserrat", sans-serif;
   width: 257px;
   letter-spacing: -3px;
-  /* letter spacing 한 글자 사이의 거리 */
   line-height: 1;
 }
 
-.slide .info h2.mo_title {
+.slide__text h2.mo_title {
   display: none;
 }
 
-.slide .info p {
+.slide__text p {
   font-size: 18px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  margin: 15px 0 18px 0;
+  margin: 15px 0 18px;
 }
-
-.slide .info .btn {
+.slide__text .btn {
   width: 256px;
   height: 64px;
+  background-color: #111;
   color: #fff;
-  background-color: #111111;
-  border: none;
-  padding: 20px 104px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
   font-size: 18px;
+  border: none;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
 }
 
-/* prodct_01 */
+/* product_01 */
 .product_01 {
   display: flex;
   align-items: center;
@@ -143,33 +126,29 @@ h3 {
 }
 
 .product_01 .box {
+  width: 632px;
+  height: 642px;
+  background-color: #111;
+  color: #fff;
+  padding: 50px 48px 37px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 632px;
-  height: 642px;
-  background-color: #111111;
-  padding: 50px 48px 37px;
-  color: #fff;
 }
 
 .product_01 .box h3 {
   font-size: 40px;
   font-weight: 800;
   font-family: "Montserrat", sans-serif;
-  color: #fff;
 }
 
 .product_01 .box a {
   font-size: 30px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  color: #fff;
 }
 
 /* product_02 */
 .product_02 {
-  margin-bottom: 125px;
+  padding-bottom: 125px;
 }
 
 .product_02 h3 {
@@ -186,47 +165,38 @@ h3 {
   margin-bottom: 45px;
 }
 
-.product_02 .box .card:hover {
-  text-decoration: underline;
-}
-
 .product_02 .box .card .photo {
   width: 306px;
   height: 306px;
-  background-color: #c4c4c4;
+  background: #c4c4c4;
 }
-
 .product_02 .box .card .info {
   padding-top: 16px;
 }
-
-.product_02 .box .card .info .h4 {
+.product_02 .box .card .info h4 {
   font-size: 18px;
 }
-
 .product_02 .box .card .info .price {
   font-size: 18px;
 }
 
-.product_02 .indicator {
+.product_02 .bar_wrapper {
   background-color: #c4c4c4;
   height: 7px;
 }
-
-.product_02 .indicator .bar {
-  background-color: #111111;
+.product_02 .bar_wrapper .bar {
+  background-color: #111;
   height: 7px;
   width: 306px;
 }
 
-/* Join  */
-
+/* join */
 .join {
   margin-top: 25px;
   margin-bottom: 110px;
 }
 
-.join .join_info {
+.join_info {
   display: flex;
   flex-direction: column;
   width: 257px;
@@ -234,102 +204,85 @@ h3 {
   text-align: center;
 }
 
-.join .join_info h3 {
+.join_info h3 {
+  font-family: "Montserrat", sans-serif;
   font-size: 40px;
   font-weight: 800;
-  font-family: "Montserrat", sans-serif;
   letter-spacing: -3px;
-  /* letter spacing 한 글자 사이의 거리 */
   line-height: 1;
 }
-
-.join .join_info p {
+.join_info p {
   font-size: 18px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
   margin: 14px 0 26px;
 }
-
-.join .join_info .btn {
+.join_info .btn {
   width: 256px;
   height: 64px;
-  color: #111111;
-  background-color: transparent;
-  border: 1px solid #111111;
+  background-color: #fff;
+  font-size: 18px;
+  border: 1px solid #111;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-size: 18px;
 }
 
 /* footer */
 .footer {
-  background-color: #111111;
+  background-color: #111;
   padding-top: 66px;
   padding-bottom: 10px;
   color: #fff;
 }
 
-.footer .footer_menu {
+.footer__menu {
   display: flex;
 }
 
-.footer .footer_menu .social {
-  margin-left: auto;
-}
-
-.footer .footer_menu .bottom_menu {
+.bottom__menu {
+  margin-right: auto;
   display: flex;
 }
 
-.footer .footer_menu .bottom_menu > li {
+.bottom__menu > li {
   width: 214px;
 }
 
-.footer .footer_menu .bottom_menu > li > a {
-  display: inline-block;
-  color: rgba(255, 255, 255, 0.25);
+.bottom__menu > li > a {
   font-size: 12px;
+  color: rgba(255, 255, 255, 0.25);
   padding: 10px 0;
+  display: inline-block;
 }
 
-.bottom_menu ul a {
+.bottom__menu ul a {
   font-size: 14px;
   display: block;
   padding: 6px 0;
 }
 
-.footer_menu .social h4 {
-  display: inline-block;
-  color: rgba(255, 255, 255, 0.25);
+.social h4 {
   font-size: 12px;
-  font-weight: 500;
+  color: rgba(255, 255, 255, 0.25);
   padding: 10px 0;
+  display: inline-block;
 }
 
-.footer_menu .social .icons {
+.social .icons {
   display: flex;
-  font-size: 18px;
   gap: 16px;
-  color: #111111;
-  padding: 8px;
-  /* 위에 h4에 들어가는 패딩값을 줄여주고 줄인 만큼 여기다가 넣어야 왼쪽 메뉴와 동일선상에 둘 수 있음 */
+  color: #111;
+  font-size: 20px;
+  padding-top: 8px;
 }
-
-.footer_menu .social .icons a {
+.social .icons a {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
-  background-color: #fff;
-  border-radius: 50%;
-}
-
-.footer_menu .social .icons i {
 }
 
 .copyright {
@@ -338,17 +291,15 @@ h3 {
   color: rgba(255, 255, 255, 0.5);
 }
 
-/* 반응형 */
-/* max -> 설정한 크기 이하부터 */
-/* min -> 설정한 크기 이상부터 */
 @media (max-width: 576px) {
   .container {
     width: 100%;
     padding: initial;
   }
 
+  /* nav */
   .top {
-    padding: 0px 20px;
+    padding: 0 20px;
     padding-top: 40px;
     margin-bottom: 0;
   }
@@ -359,13 +310,17 @@ h3 {
     flex-direction: column;
     position: fixed;
     top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.86);
+    left: -100%;
+    background: rgba(0, 0, 0, 0.86);
     width: 100%;
     height: 100vh;
-    gap: 28px;
     z-index: 1;
     padding-top: 120px;
+    transition: left 0.6s;
+  }
+
+  .nav.on {
+    left: 0;
   }
 
   .nav a {
@@ -380,6 +335,10 @@ h3 {
     display: block;
     font-size: 28px;
     z-index: 2;
+    color: #111;
+  }
+
+  .bars.on {
     color: #fff;
   }
 
@@ -395,30 +354,99 @@ h3 {
   .slide {
     height: 600px;
     margin-bottom: 68px;
-    background: url(../images/Shoes_m.png) no-repeat;
-    /* 백그라운드를 플립시키는 기능은 없음. 따라서 뒤집힌 새로운 이미지를 가져와야 된다 */
+    background: url(../images/shoes_m.png) no-repeat;
     background-position: center top;
     background-size: 120%;
   }
 
-  .slide .info {
+  .slide__text {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
   }
 
-  .slide .info h2.mo_title {
+  .slide__text h2.mo_title {
     display: block;
   }
-  .slide .info h2.pc_title {
+
+  .slide__text h2.pc_title {
     display: none;
   }
 
-  .product_01,
-  .product_02,
-  .join,
-  .footer {
+  /* products */
+
+  .product_01 {
+    padding: 0 20px;
+    gap: 18px;
+    flex-direction: column;
+  }
+
+  .product_01 .box {
+    width: 100%;
+    height: 325px;
+    padding: 30px 24px;
+  }
+
+  .product_01 .box a {
+    font-size: 18px;
+  }
+
+  .product_02 {
+    padding: 0 20px;
+  }
+
+  .product_02 .box .card {
     display: none;
+  }
+
+  .product_02 .box .card:first-child {
+    display: block;
+    width: 100%;
+  }
+
+  .product_02 .box .card .photo {
+    width: 100%;
+  }
+
+  .product_02 h3 {
+    margin-bottom: 18px;
+  }
+
+  .join {
+    margin-top: 88px;
+  }
+
+  /* footer */
+  .footer {
+    padding: 80px 20px 60px;
+  }
+
+  .footer__menu {
+    flex-direction: column;
+  }
+
+  .bottom__menu {
+    margin-right: initial;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+
+  .bottom__menu > li {
+    width: 40%;
+    gap: 50px;
+  }
+
+  .product_02 .bar_wrapper {
+    display: none;
+  }
+
+  .social {
+    margin-top: 60px;
+  }
+
+  .copyright {
+    margin-top: 50px;
   }
 }
