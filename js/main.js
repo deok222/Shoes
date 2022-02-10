@@ -3,6 +3,7 @@ const nav = document.querySelector(".nav");
 const closeBtn = bars.querySelector("i");
 
 const menuItems = document.querySelectorAll(".nav li");
+// 여러 개의 속성값을 잡을 때 All이 붙는다.
 console.log(menuItems);
 
 bars.addEventListener("click", () => {
